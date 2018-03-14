@@ -7,15 +7,17 @@
       <table class="table table-sm table-hover table-striped">
         <thead>
           <tr class="text-secondary">
+            <th>ID</th>
             <th>用户名</th>
             <th>邮箱</th>
-            <th>查看/编辑/删除</th>
+            <th class="text-right">查看/编辑/删除</th>
           </tr>
         </thead>
 
         <tbody>
           <% @users.each do |user| %>
             <tr class="text-secondary">
+              <td><%= user.id %></td>
               <td>
                 <div class="d-flex flex-row">
                   <div>
@@ -36,8 +38,8 @@
                 </div>
               </td>
               <td><%= user.email %></td>
-              <td>
-                <div class="d-flex flex-row">
+              <td class="text-right">
+                <div class="d-flex flex-row justify-content-end">
                   <div class="item-h1">
                     <%= link_to "查看", user_path(user), class: "btn btn-secondary btn-sm" %>&nbsp
                   </div>

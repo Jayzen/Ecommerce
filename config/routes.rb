@@ -15,4 +15,8 @@ Rails.application.routes.draw do
   resources :password_alters,     only: [:edit, :update]
   resources :portraits,           only: [:new, :create, :update] 
   resources :categories
+  resources :products do
+    resources :product_images, only: [:index, :create, :destroy, :update]
+  end
+  resources :shopping_carts
 end

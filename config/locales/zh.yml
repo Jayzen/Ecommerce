@@ -71,7 +71,7 @@ zh:
               too_short: "密码字符太短"
             password_confirmation:
               confirmation: "两次密码不一致"
-        article:
+        product:
           attributes:
             title:
               blank: "标题不能为空"

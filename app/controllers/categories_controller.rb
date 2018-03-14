@@ -1,9 +1,18 @@
 class CategoriesController < ApplicationController
   before_action :find_root_categories, only: [:new, :create, :edit, :update]
   before_action :find_category, only: [:edit, :update, :destroy]
-  before_action :logged_in_user
-  before_action :admin_user
+  before_action :logged_in_user, except: [:show]
+  before_action :admin_user, except: [:show]
 
+  def show
+    fetch_home_data
+    
+    @category = Category.find(params[:id])
+    @products = @category.products.onshelf.page(params[:page] || 1).per(12)
+      .order("id desc").includes(:main_product_image)
+  end 
+  
+  
   def index
     if params[:id].blank?
       @categories = Category.roots

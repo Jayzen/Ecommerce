@@ -18,3 +18,4 @@
 //= require bootstrap
 //= require jcrop
 //= require avatar
+//= require home

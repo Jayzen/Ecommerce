@@ -23,7 +23,7 @@ class Category < ApplicationRecord
   validates :name, presence: { message: "标签名称不能为空" }
   validates :name, uniqueness: { message: "标签名称需唯一" }
 
-  has_many :articles, dependent: :destroy
+  has_many :products, dependent: :destroy
   has_many :subordinates, class_name: "Category", foreign_key: "ancestry"
 
   def self.grouped_data

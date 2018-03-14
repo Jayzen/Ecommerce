@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.uuid = session[:user_uuid]
     if @user.save
       UserMailer.account_activation(@user).deliver_now
       flash[:danger] = "查看邮箱，进行激活"
