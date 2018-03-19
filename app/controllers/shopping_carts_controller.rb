@@ -1,6 +1,7 @@
 class ShoppingCartsController < ApplicationController
 
   before_action :find_shopping_cart, only: [:update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   def index
     fetch_home_data

@@ -1,5 +1,4 @@
 class Product < ApplicationRecord
-
   validates :category_id, presence: { message: "分类不能为空" }
   validates :title, presence: { message: "名称不能为空" }
   validates :status, inclusion: { in: %w[on off], 
@@ -28,11 +27,9 @@ class Product < ApplicationRecord
     On = 'on'
     Off = 'off'
   end
-
-  scope :onshelf, -> { where(status: Status::On) }
-
+  
   private
-  def set_default_attrs
-    self.uuid = RandomCode.generate_product_uuid
-  end
+    def set_default_attrs
+      self.uuid = RandomCode.generate_product_uuid
+    end
 end

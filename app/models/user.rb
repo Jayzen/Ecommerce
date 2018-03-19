@@ -16,6 +16,10 @@ class User < ApplicationRecord
     
   has_secure_password
 
+  has_many :addresses, -> { where(address_type: Address::AddressType::User).order("id desc") }
+  belongs_to :default_address, class_name: :Address, optional: true
+  has_many :orders
+
   def crop_avatar
     avatar.recreate_versions! if crop_x.present?
   end
