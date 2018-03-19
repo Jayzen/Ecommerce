@@ -7,6 +7,6 @@ class ProductImageUploader < CarrierWave::Uploader::Base
   end
  
   version :large do
-    resize_to_fit(200,nil)
+    resize_to_fit(250,nil)
   end
 end
