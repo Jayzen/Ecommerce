@@ -36,7 +36,7 @@ gem 'friendly_id'
 gem 'babosa'
 gem 'ancestry'
 gem 'mini_magick', '~> 4.8'
-
+gem 'lightbox-bootstrap-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

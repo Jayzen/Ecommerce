@@ -18,3 +18,5 @@
 //= require bootstrap
 //= require jcrop
 //= require avatar
+//= require lightbox-bootstrap
+//= require lightbox_bootstraped
