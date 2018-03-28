@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
         update_browser_uuid user.uuid
         params[:session][:remember_me] == '1' ? remember(user) : forget(user)
         flash[:success] = "用户登录成功!"
-        redirect_back_or user
+        redirect_to  edit_user_path(user)
       end
     else
       flash.now[:danger] = '邮箱或者密码错误!'

@@ -1,1 +1,1 @@
-An Ecommerce Platform
+An Blog and Resume Platform

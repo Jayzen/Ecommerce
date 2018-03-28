@@ -1,8 +1,6 @@
 class WelcomesController < ApplicationController
-  def index
-    fetch_home_data
+  layout "resume"
 
-    @products = Product.onshelf.page(params[:page] || 1).per(12)
-      .order("id desc").includes(:main_product_image) 
+  def index
   end
 end

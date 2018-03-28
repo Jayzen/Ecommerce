@@ -34,9 +34,8 @@ gem 'carrierwave'
 gem 'rails-assets-jcrop', source: 'https://rails-assets.org'
 gem 'friendly_id'
 gem 'babosa'
-gem 'ancestry'
 gem 'mini_magick', '~> 4.8'
-gem 'lightbox-bootstrap-rails'
+gem 'mysql2', '~> 0.4.4'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

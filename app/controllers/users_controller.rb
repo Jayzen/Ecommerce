@@ -9,12 +9,6 @@ class UsersController < ApplicationController
   before_action :admin_user, only: [:destroy, :index, :destroy]
   before_action :superadmin_user, only: [:authorize, :unauthorize, :destroy]
 
-  def show
-    if request.path != user_path(@user)
-      redirect_to @user, :status => :moved_permanently
-    end
-  end
-
   def new
     @user = User.new
   end
